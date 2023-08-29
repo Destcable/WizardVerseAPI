@@ -5,7 +5,7 @@ namespace Client;
 use Client\Faculty;
 use Client\Spell;
 
-class Wizard
+abstract class Wizard
 {
     private string $name;
     private Faculty $faculty;
