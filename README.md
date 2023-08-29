@@ -80,21 +80,20 @@ $wizard1 = new StudentWizard("Harry Potter", $gryffindor, 17);
 $wizard2 = new StudentWizard("Hermione Granger", $gryffindor, 18);
 $wizard3 = new StudentWizard("Draco Malfoy", $slytherin, 17);
 
-$spell1 = new Spell("Expelliarmus", "Charm", "Disarms your opponent");
-$spell2 = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
+$professor1 = new ProfessorWizard("Severus Snape", $slytherin, 38);
+$professor2 = new ProfessorWizard("Minerva McGonagall", $gryffindor, 55);
 
-$wizard1->addSpell($spell1);
-$wizard2->addSpell($spell2);
+$expelliarmus = new Spell("Expelliarmus", "Charm", "Disarms your opponent");
+$lumos = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
 
-$wizard2->removeSpell(
-    $spell1->getName()
-);
+$professor1->addSpell($expelliarmus);
+$professor1->addSpell($lumos);
 
 Database::addWizard($wizard1);
 Database::addWizard($wizard2);
 
-Database::addSpell($spell1);
-Database::addSpell($spell2);
+Database::addSpell($expelliarmus);
+Database::addSpell($lumos);
 
 Database::filterByFaculty($gryffindor);
 Database::searchSpell('Expelliarmus');

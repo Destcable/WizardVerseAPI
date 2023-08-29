@@ -10,18 +10,13 @@ abstract class Wizard
     private string $name;
     private Faculty $faculty;
     private int $age;
-    private array $spells = [];
+    protected array $spells = [];
 
     public function __construct(string $name, Faculty $faculty, int $age)
     {
         $this->name = $name;
         $this->faculty = $faculty;
         $this->age = $age;
-    }
-
-    public function addSpell(Spell $spell)
-    {
-        $this->spells [$spell->getName()]= $spell;
     }
 
     public function getSpells(): array
