@@ -3,7 +3,6 @@
 namespace Client\Base;
 
 use Client\SpecialAbility;
-use Client\Wizard;
 
 abstract class Entity
 {

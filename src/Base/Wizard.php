@@ -1,6 +1,6 @@
 <?php
 
-namespace Client;
+namespace Client\Base;
 
 use Client\Faculty;
 use Client\Spell;

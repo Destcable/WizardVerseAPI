@@ -8,8 +8,9 @@ $gryffindor = new Faculty("Gryffindor");
 ```
 
 Создание волшебника
+
 ```php
-use Client\Wizard;
+use Client\Base\Wizard;
 
 $HarryPotter = new Wizard("Harry Potter", $gryffindor, 17);
 ```
@@ -54,17 +55,11 @@ Database::filterByFaculty($gryffindor)
 ```
 
 Пример
+
 ```php
 <?php
 
-use Client\Wizard;
-use Client\Spell;
-use Client\Database;
-use Client\Faculty;
-use Client\SpecialAbility;
-
-use Client\Entity\Dragon;
-use Client\Entity\Phoenix;
+use Client\Base\Wizard;use Client\Database;use Client\Entity\Dragon;use Client\Entity\Phoenix;use Client\Faculty;use Client\SpecialAbility;use Client\Spell;
 
 $fireBreathing = new SpecialAbility("Breathes fire");
 $healingTears = new SpecialAbility("Heals with tears");

@@ -6,7 +6,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-use Client\Wizard;
+use Client\ProfessorWizard;
+use Client\StudentWizard;
 use Client\Spell;
 use Client\Database;
 use Client\Faculty;
@@ -24,9 +25,11 @@ $dragon = new Dragon("Fire Dragon", $fireBreathing, "Breathes fire and has tough
 $phoenix = new Phoenix("Fawkes", $healingTears, "Rises from ashes and has healing tears");
 
 $gryffindor = new Faculty("Gryffindor");
+$slytherin = new Faculty("Slytherin");
 
-$wizard1 = new Wizard("Harry Potter", $gryffindor, 17);
-$wizard2 = new Wizard("Hermione Granger", $gryffindor, 18);
+$wizard1 = new StudentWizard("Harry Potter", $gryffindor, 17);
+$wizard2 = new StudentWizard("Hermione Granger", $gryffindor, 18);
+$wizard3 = new StudentWizard("Draco Malfoy", $slytherin, 17);
 
 $spell1 = new Spell("Expelliarmus", "Charm", "Disarms your opponent");
 $spell2 = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");

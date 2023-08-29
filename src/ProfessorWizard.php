@@ -2,7 +2,9 @@
 
 namespace Client;
 
-class ProfessorWizard
+use Client\Base\Wizard;
+
+class ProfessorWizard extends Wizard
 {
 
 }

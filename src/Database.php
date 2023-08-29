@@ -2,6 +2,8 @@
 
 namespace Client;
 
+use Client\Base\Wizard;
+
 class Database
 {
     private static array $wizards = [];
