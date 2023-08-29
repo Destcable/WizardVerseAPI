@@ -1,8 +1,9 @@
 <?php
 
-namespace Client;
+namespace Client\Wizard;
 
 use Client\Base\Wizard;
+use Client\Spell;
 
 class ProfessorWizard extends Wizard
 {

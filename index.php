@@ -6,15 +6,14 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-use Client\ProfessorWizard;
-use Client\StudentWizard;
-use Client\Spell;
 use Client\Database;
-use Client\Faculty;
-use Client\SpecialAbility;
-
 use Client\Entity\Dragon;
 use Client\Entity\Phoenix;
+use Client\Faculty;
+use Client\SpecialAbility;
+use Client\Spell;
+use Client\Wizard\ProfessorWizard;
+use Client\Wizard\StudentWizard;
 
 echo '<pre>';
 
@@ -39,8 +38,6 @@ $lumos = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
 
 $professor1->addSpell($expelliarmus, 3);
 $professor1->addSpell($lumos, 3);
-
-$professor1->getSpells();
 
 $professor1->teachSpeel($expelliarmus, $Harry_Potter);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Client;
+namespace Client\Wizard;
 
 use Client\Base\Wizard;
 

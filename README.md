@@ -1,15 +1,7 @@
 ## Пример использования
 
 ```php
-use Client\ProfessorWizard;
-use Client\StudentWizard;
-use Client\Spell;
-use Client\Database;
-use Client\Faculty;
-use Client\SpecialAbility;
-
-use Client\Entity\Dragon;
-use Client\Entity\Phoenix;
+use Client\Database;use Client\Entity\Dragon;use Client\Entity\Phoenix;use Client\Faculty;use Client\SpecialAbility;use Client\Spell;use Client\Wizard\ProfessorWizard;use Client\Wizard\StudentWizard;
 
 $fireBreathing = new SpecialAbility("Breathes fire");
 $healingTears = new SpecialAbility("Heals with tears");
