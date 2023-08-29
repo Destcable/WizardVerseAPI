@@ -53,3 +53,4 @@ Database::searchSpell('Expelliarmus');
 
 $wizards = Database::getWizards();
 $spells = Database::getSpells();
+// Нужно сделать так чтобы студент давал запрос к профессору, только после этого профессор начинал учить
