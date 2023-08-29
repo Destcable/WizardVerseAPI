@@ -37,8 +37,11 @@ $professor2 = new ProfessorWizard("Minerva McGonagall", $gryffindor, 55);
 $expelliarmus = new Spell("Expelliarmus", "Charm", "Disarms your opponent");
 $lumos = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
 
-$professor1->addSpell($expelliarmus);
-$professor1->addSpell($lumos);
+$professor1->addSpell($expelliarmus, 3);
+$professor1->addSpell($lumos, 3);
+
+print_r($professor1->getSpells());
+$professor1->teachSpeel($expelliarmus, $wizard1);
 
 Database::addWizard($wizard1);
 Database::addWizard($wizard2);
