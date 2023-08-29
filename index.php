@@ -27,9 +27,9 @@ $phoenix = new Phoenix("Fawkes", $healingTears, "Rises from ashes and has healin
 $gryffindor = new Faculty("Gryffindor");
 $slytherin = new Faculty("Slytherin");
 
-$wizard1 = new StudentWizard("Harry Potter", $gryffindor, 17);
-$wizard2 = new StudentWizard("Hermione Granger", $gryffindor, 18);
-$wizard3 = new StudentWizard("Draco Malfoy", $slytherin, 17);
+$Harry_Potter = new StudentWizard("Harry Potter", $gryffindor, 17);
+$Hermione_Granger = new StudentWizard("Hermione Granger", $gryffindor, 18);
+$Draco_Malfoy = new StudentWizard("Draco Malfoy", $slytherin, 17);
 
 $professor1 = new ProfessorWizard("Severus Snape", $slytherin, 38);
 $professor2 = new ProfessorWizard("Minerva McGonagall", $gryffindor, 55);
@@ -40,11 +40,13 @@ $lumos = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
 $professor1->addSpell($expelliarmus, 3);
 $professor1->addSpell($lumos, 3);
 
-print_r($professor1->getSpells());
-$professor1->teachSpeel($expelliarmus, $wizard1);
+$professor1->getSpells();
 
-Database::addWizard($wizard1);
-Database::addWizard($wizard2);
+$professor1->teachSpeel($expelliarmus, $Harry_Potter);
+
+Database::addWizard($Harry_Potter);
+Database::addWizard($Hermione_Granger);
+Database::addWizard($Draco_Malfoy);
 
 Database::addSpell($expelliarmus);
 Database::addSpell($lumos);
