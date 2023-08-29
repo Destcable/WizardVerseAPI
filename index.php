@@ -11,8 +11,18 @@ use Client\Wizard;
 use Client\Spell;
 use Client\Database;
 use Client\Faculty;
+use Client\SpecialAbility;
+
+use Client\Entity\Dragon;
+use Client\Entity\Phoenix;
 
 echo '<pre>';
+
+$fireBreathing = new SpecialAbility("Breathes fire");
+$healingTears = new SpecialAbility("Heals with tears");
+
+$dragon = new Dragon("Fire Dragon", $fireBreathing, "Breathes fire and has tough scales");
+$phoenix = new Phoenix("Fawkes", $healingTears, "Rises from ashes and has healing tears");
 
 $gryffindor = new Faculty("Gryffindor");
 
@@ -35,7 +45,8 @@ Database::addWizard($wizard2);
 Database::addSpell($spell1);
 Database::addSpell($spell2);
 
-print_r(Database::filterByFaculty($gryffindor));
+Database::filterByFaculty($gryffindor);
+Database::searchSpell('Expelliarmus');
 
 $wizards = Database::getWizards();
 $spells = Database::getSpells();

@@ -14,7 +14,7 @@ class Database
 
     public static function addSpell(Spell $spell)
     {
-        self::$spells []= $spell;
+        self::$spells [$spell->getName()]= $spell;
     }
 
     public static function filterByFaculty(Faculty $faculty)
@@ -27,6 +27,13 @@ class Database
         }
 
         return $wizardFilter;
+    }
+
+    public static function searchSpell(string $name)
+    {
+        if (isset( self::$spells[$name] )) {
+            return self::$spells[$name];
+        }
     }
 
     public static function getWizards(): array
