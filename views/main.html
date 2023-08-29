@@ -22,11 +22,22 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+    .circle-border {
+      border: 2px solid #007bff; /* Цвет обводки */
+      border-radius: 100%; /* Создание круглой формы обводки */
+      display: inline-block; /* Чтобы обводка обрамляла только изображение */
+      overflow: hidden; /* Скрытие выходящей за границы обводки части изображения */
+    }
 </style>
 
 <body>
     <div class="overlay">
-        <img src="./img/harry.png" width="300px">
+        <div class="container">
+            <div class="circle-border">
+              <img src="./img/harry.png" class="mt-5  mb-5" alt="Harry Potter" width="300px">
+            </div>
+          </div>
     </div>
 
 </body>
