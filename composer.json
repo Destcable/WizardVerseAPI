@@ -1,0 +1,15 @@
+{
+    "name": "komandaf5/wizard-verse-api",
+    "autoload": {
+        "psr-4": {
+            "Client\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Destcable",
+            "email": "artmobpavlov21@gmail.com"
+        }
+    ],
+    "require": {}
+}
