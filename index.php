@@ -9,13 +9,17 @@ error_reporting(E_ALL);
 use Client\Database;
 use Client\Entity\Dragon;
 use Client\Entity\Phoenix;
+use Client\Event\TournamentEvent;
 use Client\Faculty;
+use Client\MagicalWorld;
 use Client\SpecialAbility;
 use Client\Spell;
 use Client\Wizard\ProfessorWizard;
 use Client\Wizard\StudentWizard;
 
 echo '<pre>';
+
+$magicalWorld = new MagicalWorld();
 
 $fireBreathing = new SpecialAbility("Breathes fire");
 $healingTears = new SpecialAbility("Heals with tears");
@@ -40,6 +44,18 @@ $professor1->addSpell($expelliarmus, 3);
 $professor1->addSpell($lumos, 3);
 
 $professor1->teachSpeel($expelliarmus, $Harry_Potter);
+
+$tournament = new TournamentEvent(
+    name: "Wizarding Tournament",
+    description: "A magical duel competition", 
+    date: "2023-09-15 12:00:00", 
+    prize:30000
+);
+
+$magicalWorld->addEvent($tournament);
+
+print_r($magicalWorld->listEvents());
+
 
 Database::addWizard($Harry_Potter);
 Database::addWizard($Hermione_Granger);
