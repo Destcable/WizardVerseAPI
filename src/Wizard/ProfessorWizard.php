@@ -19,7 +19,7 @@ class ProfessorWizard extends Wizard
     public function teachSpeel(Spell $speel, StudentWizard $studentWizard)
     {
         if (isset( $this->spells[$speel->getName()] )) {
-            echo 22;
+            $studentWizard->spells [$speel->getName()] = $speel;
         }
     }
 }
