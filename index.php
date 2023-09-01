@@ -16,6 +16,7 @@ use Client\SpecialAbility;
 use Client\Spell;
 use Client\Wizard\ProfessorWizard;
 use Client\Wizard\StudentWizard;
+use Client\MagicalItem;
 
 echo '<pre>';
 
@@ -40,6 +41,10 @@ $professor2 = new ProfessorWizard("Minerva McGonagall", $gryffindor, 55);
 $expelliarmus = new Spell("Expelliarmus", "Charm", "Disarms your opponent");
 $lumos = new Spell("Lumos", "Spell", "Creates light at the tip of your wand");
 
+$wand = new MagicalItem("Wand", "A magical tool for spellcasting", "Tool");
+$book = new MagicalItem("Spell Book", "Contains spells and incantations", "Book");
+$cloak = new MagicalItem("Invisibility Cloak", "Grants invisibility to the wearer", "Cloak");
+
 $professor1->addSpell($expelliarmus, 3);
 $professor1->addSpell($lumos, 3);
 
@@ -54,7 +59,7 @@ $tournament = new TournamentEvent(
 
 $magicalWorld->addEvent($tournament);
 
-print_r($magicalWorld->listEvents());
+$magicalWorld->listEvents();
 
 
 Database::addWizard($Harry_Potter);

@@ -3,7 +3,7 @@
 namespace Client\Base;
 
 use Client\Faculty;
-use Client\Spell;
+use Client\WizardInventory;
 
 abstract class Wizard
 {
